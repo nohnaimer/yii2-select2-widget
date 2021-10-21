@@ -1,18 +1,15 @@
 <?php
 
-/*
- * This file is part of the 2amigos/yii2-select2-widget project.
- * (c) 2amigOS! <http://2amigos.us/>
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
- */
-
 namespace dosamigos\select2;
 
-use yii\bootstrap\Html;
-use yii\helpers\ArrayHelper;
 use yii\web\View;
+use yii\bootstrap5\Html;
+use yii\helpers\ArrayHelper;
 
+/**
+ * Class Select2Bootstrap
+ * @package dosamigos\select2
+ */
 class Select2Bootstrap extends Select2
 {
     /**
@@ -38,13 +35,13 @@ class Select2Bootstrap extends Select2
     public $template = '{input}';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function init()
     {
         parent::init();
 
-        $this->clientOptions['theme'] = 'bootstrap';
+        $this->clientOptions['theme'] = 'bootstrap-5';
 
         if (!empty($this->options['multiple'])) {
             Html::addCssClass($this->options, 'select2-multiple');
